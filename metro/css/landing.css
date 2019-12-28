@@ -1,0 +1,99 @@
+/* F O N D  A N I M É */
+
+.anim {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+.metro {
+	background: url(../images/metroanim.svg);
+	background-size: 200px;
+	background-position: 0% 0%;
+	animation: metro 5s infinite linear;
+}
+
+.ticket {
+	background: url(../images/ticketanim.svg);
+	background-size: 400px;
+	background-position: 20% 0%;
+	animation: ticket 10s infinite linear;
+}
+
+
+/* C O N T E N U */
+
+p {
+	text-align: center;
+	font-weight: 400;
+	width: 60%;
+	max-width: 500px;
+	margin: 0 auto;
+	position: relative;
+	top: 50vh;
+	transform: translateY(-100%);
+	background: white;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* B O U T O N */
+
+a {
+	letter-spacing: 2px;
+	text-align: center;
+	font-weight: 500;
+	line-height: 2.5;
+	width: 200px;
+	color: white;
+	background-color: pink;
+	border: 1px solid var(--default);
+	box-shadow: 1px 1px var(--accent), 2px 2px var(--accent), 3px 3px var(--accent), 4px 4px var(--accent), 5px 5px var(--default); 
+	position: absolute;
+	margin-top: 50vh; 
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 20px;
+	transition: all 200ms;
+}
+
+a:hover {
+	box-shadow: 1px 1px transparent; 
+	top: calc(50% + 7px);
+	left: calc(50% + 7px);
+}
+
+a:hover ~ div {
+	animation-play-state: paused;
+}
+
+
+/* A N I M A T I O N S */
+
+@keyframes metro {
+	0% {
+		background-position: 0px -200px;
+	}
+
+	100% {
+		background-position: 200px 0px;
+	}
+}
+
+@keyframes ticket {
+	0% {
+		background-position: 400px 0px;
+	}
+
+	100% {
+		background-position: 0px -400px;
+	}
+}

@@ -1,0 +1,227 @@
+.ticket {
+	margin: 50px auto;
+	width: 250px;
+	position: relative;
+}
+
+.ticket p {
+	position: relative;
+	opacity: 1;
+	transition: all 200ms;
+}
+
+.ticket .info {
+	display: none;
+}
+
+.ticket .code {
+	background: rgba(255, 116, 119, 0.4);
+	font-weight: 500;
+}
+
+/* Z O N E S  S U R V O L  250px */
+
+.ticket-hover {
+	z-index: 1;
+	background: transparent;
+	border: 4px solid var(--accent);
+	border-radius: 60px;
+	position: absolute;
+	opacity: 0.4;
+	transition: all 400ms;
+}
+
+#un {
+	top: 22%;
+	left: 4%;
+	height: 6%;
+	width: 24%;
+}
+
+#deux {
+	top: 22%;
+	left: 28%;
+	height: 6%;
+	width: 22%;
+}
+
+#trois {
+	top: 22%;
+	right: 0%;
+	height: 6%;
+	width: 28%;
+}
+
+#quatre {
+	top: -1%;
+	left: 5%;
+	height: 4%;
+	width: 100%;
+}
+
+#cinq {
+	top: 10%;
+	height: 9%;
+	left: -1%;
+	width: 10%;
+}
+
+#six {
+	top: 10%;
+	height: 9%;
+	right: -1%;
+	width: 10%;
+}
+
+
+/* M E D I A  Q U E R I E S */
+
+@media screen and (min-width: 600px) {
+
+	main .ticket {
+		width: 400px;
+	}
+
+	/* Z O N E S  S U R V O L  400px + trois zones de texte par ticket */
+
+	.ticket-hover {
+		z-index: 1;
+		background: transparent;
+		border: 4px solid var(--accent);
+		border-radius: 60px;
+		position: absolute;
+		opacity: 0.4;
+		transition: all 400ms;
+	}
+
+	#un {
+		top: 36%;
+		left: 5%;
+		height: 10%;
+		width: 22%;
+	}
+
+	#deux {
+		top: 36%;
+		left: 29%;
+		height: 10%;
+		width: 20%;
+	}
+
+	#trois {
+		top: 36%;
+		right: 1%;
+		height: 10%;
+		width: 25%;
+	}
+
+	#quatre {
+		top: -3%;
+		left: 5%;
+		height: 8%;
+		width: 100%;
+	}
+
+	#cinq {
+		top: 20%;
+		height: 18%;
+		left: -2%;
+		width: 10%;
+	}
+
+	#six {
+		top: 20%;
+		height: 18%;
+		right: -2%;
+		width: 10%;
+	}
+}
+
+@media screen and (min-width: 840px) {
+
+	.ticket + .ticket {
+		margin-top: 100px;
+		margin-bottom: 200px;
+	}
+
+	/* Z O N E S  S U R V O L  400px + une seule zone de texte par ticket */
+
+	.ticket-hover {
+		z-index: 1;
+		background: transparent;
+		border: 4px solid var(--accent);
+		border-radius: 60px;
+		position: absolute;
+		opacity: 0.4;
+		transition: all 400ms;
+	}
+
+	#un {
+		top: 82%;
+		left: 5%;
+		height: 20%;
+		width: 22%;
+	}
+
+	#deux {
+		top: 82%;
+		left: 29%;
+		height: 20%;
+		width: 20%;
+	}
+
+	#trois {
+		top: 82%;
+		right: 1%;
+		height: 20%;
+		width: 25%;
+	}
+
+	#quatre {
+		top: -5%;
+		left: 5%;
+		height: 20%;
+		width: 100%;
+	}
+
+	#cinq {
+		top: 60%;
+		height: 40%;
+		left: -1%;
+		width: 10%;
+	}
+
+	#six {
+		top: 60%;
+		height: 40%;
+		right: -1%;
+		width: 10%;
+	}
+
+	/* Z O N E S  D E  T E X T E S */
+
+	.ticket p {
+		position: absolute;
+		opacity: 0;
+		top: 180px;
+		transition: all 200ms;
+	}
+
+	.ticket .info {
+		display: block;
+		opacity: 1;
+	}
+
+	.ticket-hover:hover {
+		background: var(--accent);
+		opacity: 0.4;
+	}
+
+	.ticket-hover:hover + p {
+		opacity: 1;
+	}
+
+	.ticket-hover:hover ~ .info {
+		opacity: 0;
+	}
+}
