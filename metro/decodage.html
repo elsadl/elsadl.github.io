@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Le métro - Décodage</title>
+	<link href="https://fonts.googleapis.com/css?family=Muli:400,700,900,900i|Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/general.css">
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/decodage.css">
+</head>
+
+<body>
+	
+	<div class="container">
+		
+		<div class="title">
+			<h1>
+				<a href="index.html">
+					<span class="letter">L</span>
+					<span class="letter space">E</span>
+					<span class="letter">M</span>
+					<span class="letter">É</span>
+					<span class="letter">T</span>
+					<span class="letter">R</span>
+					<span class="letter">O</span>
+					<span class="letter hide">P</span>
+					<span class="letter hide">O</span>
+					<span class="letter hide">L</span>
+					<span class="letter hide">I</span>
+					<span class="letter hide">T</span>
+					<span class="letter hide">A</span>
+					<span class="letter hide">I</span>
+					<span class="letter hide">N</span>
+				</a>
+			</h1>
+			<!--paragraphe vide pour sticky--><p></p>
+		</div>
+
+		<nav>
+			<div class="burger-closed">
+				<div class="burger-inner"></div>
+				<div class="burger-inner"></div>
+				<div class="burger-inner"></div>
+			</div>
+			<ul>
+				<li><a href="accueil.html"><div class="lum"></div><span>Accueil</span></a></li>
+				<li><a href="chronologie.html"><div class="lum"></div><span>Chronologie</span></a></li>
+				<li><a href="decodage.html"><div class="lum"></div><span>Décodage</span></a></li>
+				<li><a href="ressources.html"><div class="lum"></div><span>Ressources</span></a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<h2>Comment lire un ticket de métro</h2>
+			<p>Plusieurs codes sont imprimés sur le ticket de métro au moment de son émission puis de son compostage. Ils fournissent des informations quant à la provenance du ticket et son utilisation. </p>
+			<div class="ticket">
+				<img src="../images/ticketavant.svg" alt="ticket avant">
+				<div id="un" class="ticket-hover"></div>
+				<p><span class="code">"02919481 F"</span> : Le <strong>numéro du carnet</strong> duquel est issu le ticket, suivi de la lettre représentant la place du ticket au sein de ce carnet (de A, pour 1, à J, pour 10).</p>
+				<div id="deux" class="ticket-hover"></div>
+				<p><span class="code">"2305 B15"</span> : Le <strong>code de la station</strong> où a été acheté le ticket (ici 2305, Gallieni) suivi du <strong>code de la machine</strong> ayant délivré le ticket.</p>
+				<div id="trois" class="ticket-hover"></div>
+				<p><span class="code">"EUR 1,49 CB"</span> : Le <strong>coût du ticket</strong> (ici 1,49€ car acheté en carnet) ainsi que le moyen de paiement utilisé pour l'acheter.</p>
+				<p class="info">La face avant comporte les informations relatives à l'achat du ticket et à sa provenance.</p>
+			</div>
+			<div class="ticket">
+				<img src="../images/ticketarriere.svg" alt="ticket arriere">
+				<div id="quatre" class="ticket-hover"></div>
+				<p><span class="code">"68379110 19"</span> : Le <strong>code rouleau</strong> qui identifie le rouleau à partir duquel a été imprimé le ticket.</p>
+				<div id="cinq" class="ticket-hover"></div>
+				<p><span class="code">"0108 B"</span> : Une <strong>indication géographique relative au compostage du ticket</strong> comprenant le code de la station (ici 0108, Châtelet) suivi d'une lettre permettant d'identifier le tourniquet emprunté au sein de la station.</p>
+				<div id="six" class="ticket-hover"></div>
+				<p><span class="code">"5L239"</span> : Une <strong>indication temporelle relative au compostage du ticket</strong>, avec l'heure de compostage, ignorant les minutes et sur une échelle de 12, la première lettre du jour de la semaine, un chiffre indiquant le moment de la journée (1 pour matin, 2 pour après-midi), et enfin le numéro de la semaine ; dans cet exemple, le ticket a été composté le lundi de la trente-neuvième semaine de l'année, entre 16h et 16h59.</p>
+				<p class="info">La face arrière comporte les informations relatives au compostages du ticket.</p>
+			</div>
+			<h2>Les codes station</h2>
+			<p>Toutes les stations du métro parisien sont codées sur quatre chiffres. Les deux premiers correspondent à un secteur géographique (de 01 à 31) et les deux suivants indiquent la station dans ce secteur (01 à 15).</p>
+		</main>
+
+	</div> <!-- fin container -->
+
+	<footer>
+		<div class="station"><img class="minimetro" src="../images/metrofooter.svg" alt="metro"></div>
+		<p>Codé avec &#9825;</p>
+		<p class="credits">Elsa Delmas, 2019
+		<br>Gobelins, l'École de l'Image
+		<br>BDDI 2022</p>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!--script panneau navigation mobile + class safari pour régler pb d'affichage titre-->	
+	<script>
+	$(document).ready(function() {
+	   $('nav > div').on('click',function(){
+	   		$(this).toggleClass('burger-closed').toggleClass('burger-open');
+			$('nav').toggleClass('nav-open'); 
+		});
+
+		if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {document.getElementsByClassName("title")[0].id += "safari";
+		}
+	});
+	</script>
+	
+</body>
+</html>

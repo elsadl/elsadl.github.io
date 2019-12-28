@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Le métro - Accueil</title>
+	<link href="https://fonts.googleapis.com/css?family=Muli:400,700,900,900i|Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/general.css">
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+	
+	<div class="container">
+		
+		<div class="title">
+			<h1>
+				<a href="index.html">
+					<span class="letter">L</span>
+					<span class="letter space">E</span>
+					<span class="letter">M</span>
+					<span class="letter">É</span>
+					<span class="letter">T</span>
+					<span class="letter">R</span>
+					<span class="letter">O</span>
+					<span class="letter hide">P</span>
+					<span class="letter hide">O</span>
+					<span class="letter hide">L</span>
+					<span class="letter hide">I</span>
+					<span class="letter hide">T</span>
+					<span class="letter hide">A</span>
+					<span class="letter hide">I</span>
+					<span class="letter hide">N</span>
+				</a>
+			</h1>
+			<!--paragraphe vide pour sticky--><p></p>
+		</div>
+
+		<nav>
+			<div class="burger-closed">
+				<div class="burger-inner"></div>
+				<div class="burger-inner"></div>
+				<div class="burger-inner"></div>
+			</div>
+			<ul>
+				<li><a href="accueil.html"><div class="lum"></div><span>Accueil</span></a></li>
+				<li><a href="chronologie.html"><div class="lum"></div><span>Chronologie</span></a></li>
+				<li><a href="decodage.html"><div class="lum"></div><span>Décodage</span></a></li>
+				<li><a href="ressources.html"><div class="lum"></div><span>Ressources</span></a></li>
+			</ul>
+		</nav>
+
+		<div class="accueil-img"></div>
+		<p>Photo de Dmitriy Nushtaev, Unsplash</p>
+
+		<main>
+			<h2>Hommage au ticket de métro</h2>
+			<p>Le ticket de métro fait partie de ces objets si profondément ancrés dans notre quotidien qu'on ne le remarque même plus. On s'en débarrasse souvent immédiatement après avoir l'utilisé, et, lorsque ce n'est pas le cas, son usage est souvent détourné ; on ne le (re)garde pas comme un ticket de métro, mais comme un bout de carton pratique pour marquer une page de livre ou passer ses nerfs pendant un trajet en métro.</p>
+			<p>Malgré ça, il peut porter une valeur sentimentale pour les touristes et les gens de passage, comme trace d'un séjour à Paris. Les plus âgé·e·s se souviennent parfois avec émotion du temps où le ticket était vert jade ou jaune citron — et, les plus âgé·e·s des plus âgé·e·s, du temps où il fallait le tendre au poinçonneur pour accéder au métro...</p>
+			<p>S'il a connu des changements de couleur et de design, son format est resté étonnamment constant, autour de 66 mm par 30 mm. La persistance de ce format tend dans notre imaginaire à faire du ticket de métro un objet immuable, dont la stabilité ne semble pouvoir être ébranlée par les changements d'époques et les bouleversements qui les accompagnent.</p>
+			<p>Bref, le ticket de métro est iconique, un marqueur discret de chaque époque qu'il a traversée depuis sa création à l'ouverture du métro en 1900 jusqu'à aujourd'hui. Pourtant, rattrapé par la dématérialisation des titres de transport — déjà effective depuis plusieurs années dans d'autres villes, comme à Londres avec l'Oyster Card —, il devrait disparaître d'ici 2021. Il sera remplacé par des pass Navigo destinés aux voyageurs occasionnels (Navigo Liberté+ et Navigo Easy), ainsi que par la possibilité de charger des titres de transport sur un smartphone équipé d'une puce NFC.</p>
+			<h2>Le métro parisien en trois chiffres</h2>
+			<div class="chiffres">
+				<div class="chiffres-element">
+					<h4>5 millions</h4>
+					<p>de voyageurs quotidiens</p>
+				</div>
+				<div class="chiffres-element">
+					<h4>50 millions</h4>
+					<p>de pass mensuels vendus chaque année</p>
+				</div>
+				<div class="chiffres-element">
+					<h4>550 millions</h4>
+					<p>de tickets vendus chaque année</p>
+				</div>
+			</div>
+		</main>
+
+	</div> <!-- fin container -->
+
+	<footer>
+		<div class="station"><img class="minimetro" src="../images/metrofooter.svg" alt="metro"></div>
+		<p>Codé avec &#9825;</p>
+		<p class="credits">Elsa Delmas, 2019
+		<br>Gobelins, l'École de l'Image
+		<br>BDDI 2022</p>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<!--script panneau navigation mobile + class safari pour régler pb d'affichage titre-->	
+	<script>
+	$(document).ready(function() {
+	   $('nav > div').on('click',function(){
+	   		$(this).toggleClass('burger-closed').toggleClass('burger-open');
+			$('nav').toggleClass('nav-open'); 
+		});
+
+		if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {document.getElementsByClassName("title")[0].id += "safari";
+		}
+	});
+	</script>
+
+</body>
+</html>

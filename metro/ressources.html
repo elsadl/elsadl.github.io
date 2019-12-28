@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Le métro - Ressources</title>
+	<link href="https://fonts.googleapis.com/css?family=Muli:400,900|Roboto:100,300,500,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/general.css">
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+	<div class="container">
+		
+		<div class="title">
+			<h1>
+				<a href="index.html">
+					<span class="letter">L</span>
+					<span class="letter space">E</span>
+					<span class="letter">M</span>
+					<span class="letter">É</span>
+					<span class="letter">T</span>
+					<span class="letter">R</span>
+					<span class="letter">O</span>
+					<span class="letter hide">P</span>
+					<span class="letter hide">O</span>
+					<span class="letter hide">L</span>
+					<span class="letter hide">I</span>
+					<span class="letter hide">T</span>
+					<span class="letter hide">A</span>
+					<span class="letter hide">I</span>
+					<span class="letter hide">N</span>
+				</a>
+			</h1>
+			<!--paragraphe vide pour sticky--><p></p>
+		</div>
+
+		<nav>
+			<div class="burger-closed">
+				<div class="burger-inner"></div>
+				<div class="burger-inner"></div>
+				<div class="burger-inner"></div>
+			</div>
+			<ul>
+				<li><a href="accueil.html"><div class="lum"></div><span>Accueil</span></a></li>
+				<li><a href="chronologie.html"><div class="lum"></div><span>Chronologie</span></a></li>
+				<li><a href="decodage.html"><div class="lum"></div><span>Décodage</span></a></li>
+				<li><a href="ressources.html"><div class="lum"></div><span>Ressources</span></a></li>
+			</ul>
+		</nav>
+
+		<main class="ressources">
+			<h2>Pour en savoir plus</h2>
+			<ul>
+				<li>
+					<a href="https://www.ratp.fr/decouvrir">Le site de la RATP</a>
+					<p>La référence officielle pour tout savoir sur l'actualité du réseau parisien</p>
+				</li>
+				<li>
+					<a href="https://aurelienb.pagesperso-orange.fr/HTML/transports/index.htm">Le site personnel d'Aurélien Baro</a>
+					<p>Une mine d'informations sur les transports franciliens — et accessoirement un beau souvenir de l'âge d'or du webdesign, à l'aube des années 2000</p>
+				</li>
+				<li>
+					<a href="https://www.symbioz.net/index.php">Le site Symbioz Transports en Commun</a>
+					<p>Tout aussi complet et un peu plus sobre, un site dédié aux transports en commun français, du métro aux TGV</p>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/channel/UCvfN6euAx44W3632u8P6XSw">La chaîne YouTube Merci Citron</a>
+					<p>Comme son nom ne l'indique pas, une super chaîne YouTube qui offre les réponses à toutes les questions que l'on ne s'était jamais posées sur le métro</p>
+				</li>
+				<li>
+					<a href="https://www.liberation.fr/france/2019/07/19/le-ticket-de-metro-fete-ses-119-ans-et-se-prepare-a-disparaitre_1740798">"Le ticket de métro fête ses 119 ans et se prépare à disparaître"</a>
+					<p class="sous-titre">Rico Rizzitelli sur Libération, le 19 janvier 2019</p>
+					<p>Un retour sur l'histoire du ticket de métro proposé par Libération à l'occasion de ses 119 ans et de sa disparition prochaine</p>
+				</li>
+				<li>
+					<a href="http://www.paris-unplugged.fr/petite-histoire-du-ticket-de-metro/">"Petite histoire du ticket de métro"</a>
+					<p class="sous-titre">Grégoire Thonnat pour Paris Unplugged, 2014</p>
+					<p>Une histoire accélérée du ticket de métro et de ses transformations de 1900 à aujourd'hui</p>
+				</li>
+			</ul>
+			<h5>À bientôt dans le métro !</h5>
+			<p>© Merci Citron</p>		
+		</main>
+
+	</div> <!-- fin container -->
+
+	<footer>
+		<div class="station"><img class="minimetro" src="../images/metrofooter.svg" alt="metro"></div>
+		<p>Codé avec &#9825;</p>
+		<p class="credits">Elsa Delmas, 2019
+		<br>Gobelins, l'École de l'Image
+		<br>BDDI 2022</p>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!--script panneau navigation mobile + class safari pour régler pb d'affichage titre-->	
+	<script>
+	$(document).ready(function() {
+	   $('nav > div').on('click',function(){
+	   		$(this).toggleClass('burger-closed').toggleClass('burger-open');
+			$('nav').toggleClass('nav-open'); 
+		});
+
+		if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {document.getElementsByClassName("title")[0].id += "safari";
+		}
+	});
+	</script>
+
+</body>
+</html>
