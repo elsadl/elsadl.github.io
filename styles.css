@@ -1,0 +1,327 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--default: #333330;
+	--accent: #;
+	--title: #;
+	--light-grey: #F4F4F4;
+	--project-bg: #F9F7F7;
+	font-family: Rubik, sans-serif;
+	font-weight: 300;
+}
+
+body {
+	margin: 0 auto;
+	color: var(--default);
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+img {
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+ul li {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: var(--default);
+	border-bottom: 10px;
+}
+
+nav {
+	position: fixed;
+	right: 40px;
+	z-index: 2;
+}
+
+nav ul {
+	display: inline-flex;
+	align-content: flex-end;
+}
+
+nav ul li a {
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+	border-bottom: 0px solid var(--default);
+}
+
+nav ul li a::after {
+	content:'';
+	display:block;
+	height: 3px;
+	background: var(--default);
+	width: 0%;
+		transition: all 400ms;
+
+}
+
+nav ul li a:hover::after {
+	content:'';
+	display:block;
+	height: 3px;
+	background: var(--default);
+	width: 100%;
+}
+
+nav ul li + li {
+	margin-left: 30px; 
+}
+
+
+
+
+.home {
+	height: 100vh;
+	position: relative;
+}
+
+
+.project {
+	background-color: var(--project-bg);
+ 	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 100px 10%;
+	position: relative;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.one {
+  background-image: url("images/metrotrame.png");
+}
+
+.two {
+ background-image: url("images/cannesmotif.png");
+}
+
+.three {
+  background-image: url("images/fondcarte.png");
+}
+
+.project h2 {
+	font-size: 1.2em;
+	font-weight: 500;
+	display: inline;
+	border-bottom: 2px solid var(--default);
+}
+
+.project .project-content {
+	max-width: 600px;
+	padding: 30px;
+	background: white;
+	border: 2px solid var(--default);
+//	box-shadow: 6px 6px 0px var(--default);
+
+}
+
+
+
+.project p + p {
+	margin-bottom: 50px;
+}
+
+.more {
+	position: relative;
+		display: inline-block;
+	padding: 8px 20px;
+	border: 2px solid var(--default);
+	box-shadow: 6px 6px 0px var(--default);
+		background: white;
+		transition: transform 200ms, box-shadow 200ms;
+
+}
+
+.project .more {
+	top: -20px;
+	left: 20px;
+}
+
+.project-info {
+	margin-top: 20px;
+	font-weight: 500;
+	color: grey;
+}
+
+
+.about, .accueil {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.accueil {
+	text-align: center;
+}
+
+
+.contact {
+	padding: 80px 10%;
+}
+
+.contact h3 {
+	font-weight: 500;
+}
+
+.project-focus {
+	width: 60%;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+
+.project-focus h2 {
+	font-size: 2em;
+}
+
+
+.project-focus .web {
+	display: none;
+}
+
+.project-focus .mobile {
+	display: block;
+	border: 4px var(--light-grey) solid;
+	border-top: var(--light-grey) 10px solid;
+	border-bottom: var(--light-grey) 10px solid;;
+	border-radius: 10px;
+	height: 500px;
+	overflow: scroll;
+	font-size: 0;
+	position: relative;
+	margin: 60px 0;
+}
+
+.web img, .mobile img {
+	width: 100%;
+    position: relative;
+}
+
+
+.project-focus .more {
+	top: 10px;
+}
+
+.project-focus .links-lmd {
+	display: flex;
+}
+
+
+.bold {
+	display: inline-block;
+	font-weight: 500;
+	border-bottom: 2px solid var(--default);
+}
+
+
+.home-btn {
+	position: fixed;
+	margin: 10px 0;
+	left: 20px;
+	z-index: 2;
+	width: 80px;
+}
+
+.project-focus .image img {
+	margin-top: 60px;
+}
+
+.project-nav {
+	display: inline-block;
+	max-width: 900px;
+	margin: 60px auto;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.project-nav a {
+	transition: transform 600ms;
+	padding: 0 20px;
+	font-size: 36px;
+}
+
+.project-nav .previous:hover {
+	transform: translate(-20px, 0px);
+}
+
+.project-nav .next:hover {
+	transform: translate(20px, 0px);
+}
+
+
+.more + .more {
+	margin-left: 20px;
+}
+
+.more:hover {
+	transform: translate(0px, -6px);
+}
+
+.about h5 {
+	font-weight: 700;
+}
+
+.about ul li a {
+	font-weight: 500;
+	line-height: 25px;
+	display: inline-block;
+	transition: transform 400ms, color 400ms;
+}
+
+.about ul li a:hover {
+	transform: translate(20px, 0);
+}
+
+
+@media screen and (min-width: 800px) {
+.project-nav a {
+	transition: transform 600ms;
+	padding: 0 100px;
+}
+
+.project-focus .mobile {
+	display: none;
+}
+
+.project-focus .web {
+	display: block;
+	border: 4px var(--light-grey) solid;
+	border-top: var(--light-grey) 30px solid;
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+	height: 500px;
+	overflow: scroll;
+	font-size: 0;
+	position: relative;
+	margin: 60px 0;
+}
+
+.home-btn {
+	width: 120px;
+}
+
+}
+
+
+
+
+
+
+
