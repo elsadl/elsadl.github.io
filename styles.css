@@ -4,8 +4,6 @@
 
 :root {
 	--default: #333330;
-	--accent: #;
-	--title: #;
 	--light-grey: #F4F4F4;
 	--project-bg: #F9F7F7;
 	font-family: Rubik, sans-serif;
@@ -67,7 +65,7 @@ nav ul li a::after {
 	height: 3px;
 	background: var(--default);
 	width: 0%;
-		transition: all 400ms;
+	transition: all 400ms;
 
 }
 
@@ -83,14 +81,10 @@ nav ul li + li {
 	margin-left: 30px; 
 }
 
-
-
-
 .home {
 	height: 100vh;
 	position: relative;
 }
-
 
 .project {
 	background-color: var(--project-bg);
@@ -127,11 +121,7 @@ nav ul li + li {
 	padding: 30px;
 	background: white;
 	border: 2px solid var(--default);
-//	box-shadow: 6px 6px 0px var(--default);
-
 }
-
-
 
 .project p + p {
 	margin-bottom: 50px;
@@ -139,13 +129,12 @@ nav ul li + li {
 
 .more {
 	position: relative;
-		display: inline-block;
+	display: inline-block;
 	padding: 8px 20px;
 	border: 2px solid var(--default);
 	box-shadow: 6px 6px 0px var(--default);
-		background: white;
-		transition: transform 200ms, box-shadow 200ms;
-
+	background: white;
+	transition: transform 200ms, box-shadow 200ms;
 }
 
 .project .more {
@@ -153,12 +142,19 @@ nav ul li + li {
 	left: 20px;
 }
 
+.more + .more {
+	margin-left: 20px;
+}
+
+.more:hover {
+	transform: translate(0px, -6px);
+}
+
 .project-info {
 	margin-top: 20px;
 	font-weight: 500;
 	color: grey;
 }
-
 
 .about, .accueil {
 	position: absolute;
@@ -171,15 +167,6 @@ nav ul li + li {
 	text-align: center;
 }
 
-
-.contact {
-	padding: 80px 10%;
-}
-
-.contact h3 {
-	font-weight: 500;
-}
-
 .project-focus {
 	width: 60%;
 	margin: 0 auto;
@@ -189,7 +176,6 @@ nav ul li + li {
 .project-focus h2 {
 	font-size: 2em;
 }
-
 
 .project-focus .web {
 	display: none;
@@ -213,7 +199,6 @@ nav ul li + li {
     position: relative;
 }
 
-
 .project-focus .more {
 	top: 10px;
 }
@@ -222,13 +207,11 @@ nav ul li + li {
 	display: flex;
 }
 
-
 .bold {
 	display: inline-block;
 	font-weight: 500;
 	border-bottom: 2px solid var(--default);
 }
-
 
 .home-btn {
 	position: fixed;
@@ -265,15 +248,6 @@ nav ul li + li {
 	transform: translate(20px, 0px);
 }
 
-
-.more + .more {
-	margin-left: 20px;
-}
-
-.more:hover {
-	transform: translate(0px, -6px);
-}
-
 .about h5 {
 	font-weight: 700;
 }
@@ -291,6 +265,7 @@ nav ul li + li {
 
 
 @media screen and (min-width: 800px) {
+	
 .project-nav a {
 	transition: transform 600ms;
 	padding: 0 100px;
