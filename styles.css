@@ -5,7 +5,8 @@
 :root {
 	--default: #333330;
 	--light-grey: #F4F4F4;
-	--project-bg: #F9F7F7;
+	//--project-bg: #F9F7F7;
+	--project-bg: red;
 	font-family: Rubik, sans-serif;
 	font-weight: 300;
 }
@@ -87,10 +88,6 @@ nav ul li + li {
 }
 
 .project {
-	background-color: var(--project-bg);
- 	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
 	padding: 100px 10%;
 	position: relative;
 	font-weight: 300;
@@ -98,15 +95,30 @@ nav ul li + li {
 }
 
 .one {
-  background-image: url("images/metrotrame.png");
+	//background-color: var(--project-bg);
+	background-image: url("images/metrotrame.png"), 
+  linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+ 	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed, local;
 }
 
 .two {
- background-image: url("images/cannesmotif.png");
+//	background-color: var(--project-bg);
+	background-image: url("images/cannesmotif.png"), 
+ linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+ 	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed, local;
 }
 
 .three {
-  background-image: url("images/fondcarte.png");
+	//background-color: var(--project-bg);
+	background-image: url("images/fondcarte.png"), 
+  linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+ 	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed, local;
 }
 
 .project h2 {
@@ -249,7 +261,7 @@ nav ul li + li {
 }
 
 .about h5 {
-	font-weight: 700;
+	font-weight: 500;
 }
 
 .about ul li a {
@@ -293,7 +305,6 @@ nav ul li + li {
 }
 
 }
-
 
 
 
