@@ -155,7 +155,8 @@ nav ul li + li {
 }
 
 .more + .more {
-	margin-left: 20px;
+	margin-left: 0px;
+	margin-top: 20px;
 }
 
 .more:hover {
@@ -216,7 +217,8 @@ nav ul li + li {
 }
 
 .project-focus .links-lmd {
-	display: flex;
+	display: block;
+	top: 0;
 }
 
 .bold {
@@ -303,6 +305,16 @@ nav ul li + li {
 .home-btn {
 	width: 120px;
 }
+
+.project-focus .links-lmd {
+	display: flex;
+}
+
+.more + .more {
+	margin-left: 20px;
+	margin-top: 0px;
+}
+
 
 }
 
