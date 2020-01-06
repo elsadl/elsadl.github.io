@@ -224,7 +224,6 @@ nav ul li + li {
 .bold {
 	display: inline-block;
 	font-weight: 500;
-	border-bottom: 2px solid var(--default);
 }
 
 .home-btn {
@@ -315,10 +314,15 @@ nav ul li + li {
 	margin-top: 0px;
 }
 
-
 }
 
+@media screen and (min-width: 500px) {
 
+.bold {
+	border-bottom: 2px solid var(--default);
+}
+
+}
 
 
 
