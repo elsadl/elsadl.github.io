@@ -95,11 +95,20 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 }
 
 
+.project-texte .test {
+	  transition: background-position 0.8s ease-out;
+
+}
+
 .about-texte:hover .test {
   background-position: -99.99% 0;
 }
 
 .accueil:hover .test {
+	 background-position: -99.99% 0;
+}
+
+.project-texte:hover .test {
 	 background-position: -99.99% 0;
 
 }
