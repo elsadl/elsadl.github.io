@@ -82,6 +82,39 @@ nav ul li + li {
 	margin-left: 30px; 
 }
 
+
+.about-texte {
+	line-height: 1.5em;
+}
+
+.test {
+background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
+  background-position: -0% 0;
+  background-size: 200% auto;
+  transition: background-position 0.5s ease-out;
+}
+
+
+.about-texte:hover .test {
+  background-position: -99.99% 0;
+}
+
+.accueil:hover .test {
+	 background-position: -99.99% 0;
+
+}
+
+.about-texte:hover .test-two {
+  transition-delay: 0.4s;
+
+}
+
+.about-texte:hover .test-three {
+  transition-delay: 0.8s;
+
+}
+
+
 .home {
 	height: 100vh;
 	position: relative;
@@ -176,6 +209,13 @@ nav ul li + li {
 	transform: translate(-50%, -50%);
 }
 
+.about .hello {
+	width: 200px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+
 .accueil {
 	text-align: center;
 }
@@ -224,6 +264,10 @@ nav ul li + li {
 .bold {
 	display: inline-block;
 	font-weight: 500;
+}
+
+.about .bold {
+	margin-top: 50px;
 }
 
 .home-btn {
@@ -312,6 +356,18 @@ nav ul li + li {
 .more + .more {
 	margin-left: 20px;
 	margin-top: 0px;
+}
+
+.about .flex {
+	display: flex;
+//	justify-content: center;
+	align-items: center;
+}
+
+.about .hello {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 50px;
 }
 
 }
