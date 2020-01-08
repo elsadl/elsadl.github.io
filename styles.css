@@ -225,7 +225,7 @@ nav ul li + li {
 /* A B O U T */
 
 .about {
-	margin: 100px 0;
+	padding: 100px 0;
 }
 
 .about-text {
