@@ -221,7 +221,7 @@ nav ul li + li {
 /* A B O U T */
 
 .about { 
-	padding-bottom: 100px;
+	padding: 100px 0;
 	margin: 0 15%;
 }
 
@@ -231,7 +231,6 @@ nav ul li + li {
 
 .about .hello {
 	width: 200px;
-	padding-top: 150px;
 	margin-bottom: 20px;
 }
 
