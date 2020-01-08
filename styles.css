@@ -5,11 +5,12 @@
 :root {
 	--default: #333330;
 	--light-grey: #F4F4F4;
-	//--project-bg: #F9F7F7;
-	--project-bg: red;
 	font-family: Rubik, sans-serif;
 	font-weight: 300;
 }
+
+
+/* G É N É R A L */
 
 body {
 	margin: 0 auto;
@@ -39,8 +40,84 @@ ul li {
 a {
 	text-decoration: none;
 	color: var(--default);
-	border-bottom: 10px;
 }
+
+.highlight {
+	background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
+	background-position: -0% 0;
+	background-size: 200% auto;
+	transition: background-position 0.5s ease-out;
+}
+
+.welcome:hover .highlight {
+	 background-position: -99.99% 0;
+}
+
+.about-text:hover .highlight {
+  	background-position: -99.99% 0;
+}
+
+.project-text:hover .highlight {
+	 background-position: -99.99% 0;
+
+}
+
+.about-text:hover .delay-one {
+	transition-delay: 0.4s;
+}
+
+.about-text:hover .delay-two {
+	transition-delay: 0.8s;	
+}
+
+.project-text .highlight {
+	transition: background-position 0.8s ease-out;
+}
+
+.bold {
+	display: inline-block;
+	font-weight: 500;
+}
+
+.more {
+	position: relative;
+	display: inline-block;
+	padding: 8px 20px;
+	border: 2px solid var(--default);
+	box-shadow: 6px 6px 0px var(--default);
+	background: white;
+	transition: transform 200ms, box-shadow 200ms;
+}
+
+.more + .more {
+	margin-left: 0px;
+	margin-top: 20px;
+}
+
+.more:hover {
+	transform: translate(0px, -6px);
+}
+
+.home-btn {
+	position: fixed;
+	margin: 10px 0;
+	left: 20px;
+	z-index: 2;
+	width: 80px;
+}
+
+.about, .welcome {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/* N A V I G A T I O N */
 
 nav {
 	position: fixed;
@@ -61,20 +138,15 @@ nav ul li a {
 }
 
 nav ul li a::after {
-	content:'';
-	display:block;
+	content: '';
+	display: block;
 	height: 3px;
 	background: var(--default);
 	width: 0%;
 	transition: all 400ms;
-
 }
 
 nav ul li a:hover::after {
-	content:'';
-	display:block;
-	height: 3px;
-	background: var(--default);
 	width: 100%;
 }
 
@@ -83,54 +155,15 @@ nav ul li + li {
 }
 
 
-.about-texte {
-	line-height: 1.5em;
-}
-
-.test {
-background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
-  background-position: -0% 0;
-  background-size: 200% auto;
-  transition: background-position 0.5s ease-out;
-}
-
-
-.project-texte .test {
-	  transition: background-position 0.8s ease-out;
-
-}
-
-.about-texte:hover .test {
-  background-position: -99.99% 0;
-}
-
-.accueil:hover .test {
-	 background-position: -99.99% 0;
-}
-
-.project-texte:hover .test {
-	 background-position: -99.99% 0;
-
-}
-
-.about-texte:hover .test-two {
-  transition-delay: 0.4s;
-
-}
-
-.about-texte:hover .test-three {
-  transition-delay: 0.8s;
-
-}
-
-.about {
-	margin: 100px 0;
-}
-
+/* H O M E */
 
 .home {
 	height: 100vh;
 	position: relative;
+}
+
+.welcome {
+	text-align: center;
 }
 
 .project {
@@ -138,33 +171,21 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 	position: relative;
 	font-weight: 300;
 	font-size: 16px;
-}
-
-.one {
-	//background-color: var(--project-bg);
-	background-image: url("images/metrotrame.png"), 
-  linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
- 	background-repeat: no-repeat;
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed, local;
 }
 
-.two {
-//	background-color: var(--project-bg);
-	background-image: url("images/cannesmotif.png"), 
- linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
- 	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed, local;
+.project:nth-child(1) {
+	background-image: url("images/metrotrame.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
 }
 
-.three {
-	//background-color: var(--project-bg);
-	background-image: url("images/fondcarte.png"), 
-  linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
- 	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed, local;
+.project:nth-child(2) {
+	background-image: url("images/cannesmotif.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+}
+
+.project:nth-child(3) {
+	background-image: url("images/fondcarte.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
 }
 
 .project h2 {
@@ -185,28 +206,9 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 	margin-bottom: 50px;
 }
 
-.more {
-	position: relative;
-	display: inline-block;
-	padding: 8px 20px;
-	border: 2px solid var(--default);
-	box-shadow: 6px 6px 0px var(--default);
-	background: white;
-	transition: transform 200ms, box-shadow 200ms;
-}
-
 .project .more {
 	top: -20px;
 	left: 20px;
-}
-
-.more + .more {
-	margin-left: 0px;
-	margin-top: 20px;
-}
-
-.more:hover {
-	transform: translate(0px, -6px);
 }
 
 .project-info {
@@ -215,11 +217,18 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 	color: grey;
 }
 
-.about, .accueil {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+
+
+
+
+/* A B O U T */
+
+.about {
+	margin: 100px 0;
+}
+
+.about-text {
+	line-height: 1.5em;
 }
 
 .about .hello {
@@ -228,10 +237,23 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 	margin-bottom: 20px;
 }
 
-
-.accueil {
-	text-align: center;
+.about .bold {
+	margin-top: 50px;
 }
+
+.about ul li a {
+	font-weight: 500;
+	line-height: 25px;
+	display: inline-block;
+	transition: transform 400ms, color 400ms;
+}
+
+.about ul li a:hover {
+	transform: translate(20px, 0);
+}
+
+
+/* P R O J E C T */
 
 .project-focus {
 	width: 60%;
@@ -249,20 +271,15 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 
 .project-focus .mobile {
 	display: block;
-	border: 4px var(--light-grey) solid;
-	border-top: var(--light-grey) 10px solid;
-	border-bottom: var(--light-grey) 10px solid;;
+	border-style: solid;
+	border-color: #F4F4F4;
+	border-width: 10px 4px;
 	border-radius: 10px;
 	height: 500px;
 	overflow: scroll;
 	font-size: 0;
 	position: relative;
 	margin: 60px 0;
-}
-
-.web img, .mobile img {
-	width: 100%;
-    position: relative;
 }
 
 .project-focus .more {
@@ -274,25 +291,12 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 	top: 0;
 }
 
-.bold {
-	display: inline-block;
-	font-weight: 500;
-}
-
-.about .bold {
-	margin-top: 50px;
-}
-
-.home-btn {
-	position: fixed;
-	margin: 10px 0;
-	left: 20px;
-	z-index: 2;
-	width: 80px;
-}
-
-.project-focus .image img {
+.project-focus img {
 	margin-top: 60px;
+}
+
+.project-focus .web img, .project-focus .mobile img {
+	margin-top: 0;
 }
 
 .project-nav {
@@ -318,20 +322,17 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 	transform: translate(20px, 0px);
 }
 
-.about h5 {
-	font-weight: 500;
+
+/* M E D I A  Q U E R I E S */
+
+@media screen and (min-width: 500px) {
+
+.bold {
+	border-bottom: 2px solid var(--default);
 }
 
-.about ul li a {
-	font-weight: 500;
-	line-height: 25px;
-	display: inline-block;
-	transition: transform 400ms, color 400ms;
 }
 
-.about ul li a:hover {
-	transform: translate(20px, 0);
-}
 
 @media screen and (min-width: 900px) {
 
@@ -341,7 +342,6 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 
 .about .flex {
 	display: flex;
-//	justify-content: center;
 	align-items: center;
 }
 
@@ -353,10 +353,10 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 
 }
 
+
 @media screen and (min-width: 800px) {
 	
 .project-nav a {
-	transition: transform 600ms;
 	padding: 0 100px;
 }
 
@@ -391,15 +391,3 @@ background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 }
 
 }
-
-@media screen and (min-width: 500px) {
-
-.bold {
-	border-bottom: 2px solid var(--default);
-}
-
-}
-
-
-
-
