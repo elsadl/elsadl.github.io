@@ -228,7 +228,7 @@ footer:hover .minimetro {
 	background-image: url(../images/accueil.jpeg);
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -572,6 +572,10 @@ footer:hover .minimetro {
 	.chrono .chrono-element:hover figure, 
 	.chrono .chrono-element:hover .date {
 		opacity: 1;
+	}
+
+	.accueil-img {
+		background-attachment: fixed;
 	}
 	
 }
