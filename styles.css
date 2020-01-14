@@ -296,6 +296,11 @@ nav ul li + li {
 	margin-top: 0;
 }
 
+.project-focus .mockup {
+	position: relative;
+	left: 15px;
+}
+
 .project-nav {
 	display: inline-block;
 	max-width: 900px;

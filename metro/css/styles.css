@@ -227,6 +227,7 @@ footer:hover .minimetro {
 	width: 100%;
 	background-image: url(../images/accueil.jpeg);
 	background-size: cover;
+	background-origin: border-box;
 	background-position: center;
 	background-attachment: scroll;
 	margin-top: 20px;
