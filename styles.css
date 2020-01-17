@@ -301,6 +301,16 @@ nav ul li + li {
 	left: 15px;
 }
 
+.tunisia {
+	margin: 0 auto;
+	max-width: 500px;
+	text-align: center;
+}
+
+h5 {
+	text-align: center;
+}
+
 .project-nav {
 	display: inline-block;
 	max-width: 900px;
