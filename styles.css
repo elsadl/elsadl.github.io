@@ -87,7 +87,7 @@ a {
 	border: 2px solid var(--default);
 	box-shadow: 6px 6px 0px var(--default);
 	background: white;
-	transition: transform 200ms, box-shadow 200ms;
+	transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
 }
 
 .more + .more {
@@ -96,7 +96,7 @@ a {
 }
 
 .more:hover {
-	transform: translate(0px, -6px);
+	transform: translate(0px, -10px);
 }
 
 .home-btn {
@@ -189,8 +189,27 @@ nav ul li + li {
 	font-size: 1.2em;
 	font-weight: 500;
 	display: inline;
-	border-bottom: 2px solid var(--default);
+	position: relative;
 }
+
+.project h2::before, .project h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 50%;
+    height: 2px;
+    background-color: var(--default);
+    transition: width 600ms ease-in-out;
+}
+
+.project h2::after {
+	right: 0;
+}
+
+.project h2:hover::before, .project h2:hover::after {
+	width: 0;
+}
+
 
 .project .project-content {
 	max-width: 600px;
@@ -227,6 +246,29 @@ nav ul li + li {
 
 .about-text {
 	line-height: 1.5em;
+}
+
+.about-text a {
+	position: relative;
+}
+
+.about-text a::before, .about-text a::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -2px;
+    width: 50%;
+    height: 2px;
+    background-color: var(--default);
+    transition: width 400ms ease-in-out;
+}
+
+.about-text a::after {
+	right: 0;
+}
+
+.about-text a:hover::before, .about-text a:hover::after {
+    width: 0;
 }
 
 .about .hello {
