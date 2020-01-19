@@ -41,6 +41,7 @@ ul li {
 a {
 	text-decoration: none;
 	color: var(--default);
+	font-weight: 500;
 }
 
 .highlight {
