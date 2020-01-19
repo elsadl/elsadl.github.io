@@ -425,6 +425,10 @@ h5 {
 
 @media screen and (min-width: 800px) {
 	
+.nav {
+	width: 0%;
+}
+
 .project-nav a {
 	padding: 0 100px;
 }
