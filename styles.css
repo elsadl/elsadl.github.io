@@ -252,7 +252,7 @@ nav ul li + li {
 
 .about { 
 	padding: 100px 0;
-	margin: 0 15%;
+	margin: 0 7%;
 }
 
 .about-text {
@@ -306,7 +306,7 @@ nav ul li + li {
 /* P R O J E C T */
 
 .project-focus {
-	width: 60%;
+	width: 90%;
 	margin: 0 auto;
 	padding-top: 100px;
 }
@@ -317,6 +317,11 @@ nav ul li + li {
 
 .project-focus .web {
 	display: none;
+}
+
+.project-focus .wrapper-mobile {
+	max-width: 375px;
+	margin: 0 auto;
 }
 
 .project-focus .mobile {
@@ -396,6 +401,14 @@ h5 {
 	border-bottom: 2px solid var(--default);
 }
 
+.about { 
+	margin: 0 15%;
+}
+
+.project-focus {
+	width: 80%;
+}
+
 }
 
 
@@ -438,6 +451,11 @@ h5 {
 	display: none;
 }
 
+.project-focus .wrapper-web {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
 .project-focus .web {
 	display: block;
 	border: 4px var(--light-grey) solid;
@@ -466,6 +484,10 @@ h5 {
 
 .project {
 	background-attachment: fixed, local;
+}
+
+.project-focus {
+	width: 60%;
 }
 
 }
