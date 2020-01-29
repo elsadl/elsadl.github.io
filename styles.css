@@ -494,15 +494,25 @@ h5 {
 }
 
 
-/* IPAD */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)
-and (-webkit-min-device-pixel-ratio: 2) {
+/* iPad */
 
-	.project {
-	background-size: auto;
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+.project {
+	background-size: 100%;
 	background-attachment: scroll, local;
+}
+
+.project:nth-child(1) {
+	background-image: url("images/metrotrameipad.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+}
+
+.project:nth-child(2) {
+	background-image: url("images/cannesmotifipad.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+}
+
+.project:nth-child(3) {
+	background-image: url("images/fondcarteipad.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
 }
 
 }

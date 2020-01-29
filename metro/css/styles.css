@@ -588,10 +588,10 @@ footer:hover .minimetro {
 
 /* iPad fix */
 
-@media screen and (min-width: 700px) and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
  
   .accueil-img {
-    background: url(../images/accueil.jpeg) no-repeat center top !important;
+    background: url(../images/accueilcarre.jpeg) no-repeat center;
   }
 
 }
