@@ -591,7 +591,8 @@ footer:hover .minimetro {
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
  
   .accueil-img {
-    background: url(../images/accueilcarre.jpeg) no-repeat center;
+	background-image: url(../images/accueilcarre.jpg);
+	background-size: auto;
   }
 
 }
