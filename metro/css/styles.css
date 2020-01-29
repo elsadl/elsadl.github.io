@@ -234,10 +234,6 @@ footer:hover .minimetro {
 	margin-bottom: 20px;
 }
 
-.accueil-img::after {
-
-}
-
 .accueil-img + p {
 	font-style: italic;
 	font-weight: 100;
@@ -593,8 +589,9 @@ footer:hover .minimetro {
   .accueil-img {
 	background-image: url(../images/accueilipad.jpg) !important;
 	background-size: 100%;
-	background-attachment: scroll, local;
+	background-attachment: scroll, local !important;
 	background-repeat: no-repeat;
+	background-position: center;
   }
 
 }
