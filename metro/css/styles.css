@@ -226,7 +226,7 @@ footer:hover .minimetro {
 	height: 100vh;
 	width: 100%;
 	background-image: url(../images/accueil.jpeg);
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-origin: border-box;
 	background-position: center;
@@ -597,14 +597,13 @@ footer:hover .minimetro {
 
 /* iPad fix */
 
-@media screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 
   .accueil-img {
 	background-image: url(../images/accueilipad.jpg);
-	background-size: 100%;
+	background-size: 1024px;
 	background-attachment: scroll, local;
 	background-repeat: no-repeat;
-	background-position: bottom;
   }
 
 } 
