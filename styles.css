@@ -187,6 +187,7 @@ nav ul li + li {
 
 .project:nth-child(1) {
 	background-image: url("images/cncbg.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+	background-position: center;
 }
 
 .project:nth-child(2) {
@@ -569,6 +570,8 @@ h5 {
 
 .project:nth-child(1) {
 	background-image: url("images/cncbg.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+	background-position: center;
+
 }
 
 .project:nth-child(2) {
