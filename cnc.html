@@ -1,62 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Elsa Delmas</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:300,400,600,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>Elsa Delmas</title>
-	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,600,800,900&display=swap" rel="stylesheet">
-	<link rel="icon" href="images/icon.png">
-	<link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <a href="index.html" class="home-btn"
+      ><img src="images/elsadlms.svg" alt=""
+    /></a>
 
-<body>
+    <div class="nav">
+      <nav>
+        <ul>
+          <li><a href="about.html">à propos</a></li>
+          <li><a href="index.html#project">projets</a></li>
+        </ul>
+      </nav>
+    </div>
 
-	<a href="index.html" class="home-btn"><img src="images/elsadlms.svg" alt=""></a>
+    <main>
+      <div class="project-focus">
+        <div class="project-text">
+          <h2>Les budgets du CNC en graphiques</h2>
+          <p class="project-info">
+            <span class="highlight"> D3.js · mai 2020 </span>
+          </p>
+          <p>
+            Pour mon projet de fin de première année à Gobelins, je voulais
+            travailler avec D3.js, pour apprendre à utiliser cette librairie de
+            visualisation de données qui est celle qui a éveillé ma curiosité
+            pour le code. J’avais également envie de m’essayer au
+            « scrollytelling », un format que j’apprécie beaucoup en tant que
+            lectrice.
+          </p>
+          <p>
+            J'ai décidé de visualiser les données relatives aux aides
+            financières attribuées aux films agréés par le CNC chaque année.
+            Chaque année, les différences de budget entre réalisateurs et
+            réalisatrices restent énormes, malgré une sensibilisation de
+            l’opinion aux questions des inégalités entre hommes et femmes dans
+            le milieu du cinéma. Je voulais à travers ce projet étudier
+            l’évolution de ces différences au fil des années, afin de voir si
+            cette sensibilisation avait un impact sur les budgets, et si ces
+            inégalités tendaient à diminuer.
+          </p>
+          <p>
+            Pour cela, j’ai rassemblé et complété les jeux de données publiés
+            annuellement par le CNC entre 2008 et 2018, en y ajoutant pour
+            chaque film le genre de la personne l’ayant réalisé. J’ai produit
+            des graphiques animés avec D3.js, et géré les animations au scroll
+            grâce à la librairie scrollama.js.
+          </p>
+        </div>
+        <a class="more" href="https://projet-cnc.netlify.app/" target="_blank"
+          >Voir le projet</a
+        >
+        <div class="image">
+          <img src="images/cncscan.jpg" alt="recherches" />
+        </div>
+        <div class="screen-flex">
+          <img src="images/screen-cnc/1.png" alt="screen" />
+          <img src="images/screen-cnc/2.png" alt="screen" />
+          <img src="images/screen-cnc/3.png" alt="screen" />
+          <img src="images/screen-cnc/4.png" alt="screen" />
+        </div>
+        <p class="leg">Le déroulement de la visualisation se fait au scroll</p>
 
-<div class="nav">
-	<nav>
-		<ul>
-			<li><a href="about.html">à propos</a></li>
-			<li><a href="index.html#project">projets</a></li>
-		</ul>
-	</nav>
-</div>
-
-<main>
-	<div class="project-focus">
-		<div class="project-text">
-        <h2>Les budgets du CNC en graphiques</h2>
-		<h3>Projet en cours de développement</h3>
-        <p class="project-info"><span class="highlight"> D3.js · mai 2020 </span></p>
-		<p>Pour mon projet de fin de première année à Gobelins, je voulais travailler avec D3.js, pour apprendre à utiliser cette librairie de visualisation de données.</p>
-		<p>J'ai décidé de visualiser les données relatives aux aides financières attribuées aux films agréés par le CNC chaque année, pour approfondir un sujet qui m'intéresse : les inégalités entre hommes et femmes dans le milieu du cinéma.</p>
-		<p>Pour ce projet, j'ai rassemblé et complété les données publiées annuellement par le CNC entre 2008 et 2018, produit des graphiques animés avec D3.js, et géré les animations au scroll grâce à la librairie scrollama.js.</p>
-		<p>Ce projet est en cours de développement et n'est pas encore optimisé pour les petits écrans.</p>
-		</div>
-		<a class="more" href="https://projet-cnc.netlify.app/" target="_blank">Voir une première version</a>
-		<div class="image">
-            <img src="images/cncscan.jpg" alt="recherches">            
-		</div>
-		<div class="screen-flex">
-            <img src="images/screen-cnc/1.png" alt="screen">            
-            <img src="images/screen-cnc/2.png" alt="screen">            
-            <img src="images/screen-cnc/3.png" alt="screen">            
-            <img src="images/screen-cnc/4.png" alt="screen">            
-		</div>
-		<p class="leg">Le déroulement de la visualisation se fait au scroll</p>
-
-			<div class="vid">
-                <video width="100%" src="ressources/wipcnc.mov"
-                type="video/quicktime" controls></video>
-			</div>
-		<div class="project-nav">
-			<a class="previous" href="carto.html">←</a>
-			<p>1/4</p>
-			<a class="next" href="metro.html">→</a>
-		</div>
-	</div>	
-</main>
-
-</body>
+        <div class="vid">
+          <video
+            width="100%"
+            src="ressources/wipcnc.mov"
+            type="video/quicktime"
+            controls
+          ></video>
+        </div>
+        <div class="project-nav">
+          <a class="previous" href="bourses.html">←</a>
+          <p>2/5</p>
+          <a class="next" href="metro.html">→</a>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

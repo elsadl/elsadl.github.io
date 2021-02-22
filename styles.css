@@ -187,19 +187,25 @@ nav ul li + li {
 }
 
 .project:nth-child(1) {
+	background-image: url("images/boursesbg.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+	background-position: center;
+
+}
+
+.project:nth-child(2) {
 	background-image: url("images/cncbg.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
 	background-position: center;
 }
 
-.project:nth-child(2) {
+.project:nth-child(3) {
 	background-image: url("images/metrotrame.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
 }
 
-.project:nth-child(3) {
+.project:nth-child(4) {
 	background-image: url("images/cannesmotif.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
 }
 
-.project:nth-child(4) {
+.project:nth-child(5) {
 	background-image: url("images/fondcarte.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
 }
 
@@ -367,6 +373,10 @@ nav ul li + li {
 	margin: 60px 0 0 0;
 }
 
+.project-focus .screen-flex.bourses {
+	margin: 20px 0 0 0;
+}
+
 .project-focus .more {
 	top: 10px;
 }
@@ -461,6 +471,21 @@ h5 {
 
 .project-focus .mobile {
 	display: none;
+}
+
+.project-focus .web-window {
+	display: block;
+    border: 4px var(--light-grey) solid;
+    border-top: var(--light-grey) 30px solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 0;
+    position: relative;
+    margin: 60px 0 0 0;
+}
+
+.project-focus .web-window img {
+	margin-top: 0;
 }
 
 .project-focus .wrapper-web {
@@ -569,20 +594,26 @@ h5 {
 }
 
 .project:nth-child(1) {
-	background-image: url("images/cncbg.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+	background-image: url("images/boursesbg.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
 	background-position: center;
 
 }
 
 .project:nth-child(2) {
-	background-image: url("images/metrotrameipad.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+	background-image: url("images/cncbg.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+	background-position: center;
+
 }
 
 .project:nth-child(3) {
-	background-image: url("images/cannesmotifipad.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+	background-image: url("images/metrotrameipad.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
 }
 
 .project:nth-child(4) {
+	background-image: url("images/cannesmotifipad.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
+}
+
+.project:nth-child(5) {
 	background-image: url("images/fondcarteipad.png"), linear-gradient(to bottom, rgba(249, 247, 247, 1), rgba(249, 247, 247, 0));
 }
 
