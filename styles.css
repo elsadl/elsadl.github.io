@@ -401,9 +401,17 @@ nav ul li + li {
 	margin-top: 0;
 }
 
-.project-focus .mockup {
-	position: relative;
-	left: 15px;
+.project-focus .poster {
+	width: 80%;
+	max-width: 660px;
+	margin: 0 auto;
+	display: block;
+}
+
+.project-focus .poster img {
+    box-shadow: 0 6px 20px rgb(0 0 0 / 6%), 0 8px 10px rgb(0 0 0 / 6%);
+    margin-top: 120px;
+	margin-bottom: 40px;
 }
 
 .tunisia {
