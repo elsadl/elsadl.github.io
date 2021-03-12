@@ -44,6 +44,10 @@ a {
 	font-weight: 500;
 }
 
+p {
+	line-height: 1.33em;
+}
+
 .highlight {
 	background: linear-gradient(to right, rgba(255,255,255,0) 50%, #E5F0FF 50%);
 	background-position: -0% 0;
